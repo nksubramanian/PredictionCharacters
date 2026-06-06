@@ -16,6 +16,8 @@
                 new Observation(8, 4.9)
             };
 
+            //data = ObservationCsvReader.Read("ss");
+
             var candidateModels = Computation.BuildCandidateModels(data, maxBucketCount: 4);
             var selectedModel = candidateModels.OrderBy(x => x.Bic).First();
 
